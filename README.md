@@ -46,4 +46,4 @@ In order to create a build in production mode but with staging environment varia
 
 ## Mock-ups
 
-https://www.figma.com/file/DjLVhNyoVGhE9On9AKvvmQ/ST-Logic_?node-id=0%3A1
+https://www.figma.com/file/hleFainwptB2tWvbVauPqQ/ST-Logic__?node-id=0%3A1
