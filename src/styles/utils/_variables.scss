@@ -1,0 +1,130 @@
+//-------------------------------------//
+// GRID
+
+$grid-gutter: 15px;
+
+
+//-------------------------------------//
+// MEDIA QUERIES
+
+$media-lg: 1200px;
+$media-md: 992px;
+$media-sm: 768px;
+$media-xs: 480px;
+
+
+//-------------------------------------//
+// DIMENSIONS
+
+// navmenu height
+$height-navmenu: 30px;
+
+// workspace navmenu height
+$height-navmenu-workspace: 83px;
+
+// page-wrap top offset
+$pagewrap-offsettop: $height-navmenu-workspace;
+
+// border-radius
+$border-radius-base: 0;
+$border-radius-dropdown: 12px;
+
+// sidemenu width
+$width-sidemenu: 220px;
+
+// workspace dropdown width (for most menus)
+$width-workspace-dropdown-menu: 350px;
+
+
+//-------------------------------------//
+// COLORS
+
+// colors: base font
+$color-font-base: #444;
+$color-font-heading: #333;
+$color-font-light: #999;
+
+// colors: brand
+$color-brand-1: #35ce8d;
+$color-brand-2: #f87060;
+$color-brand-3: #102542;
+$color-brand-4: #193446;
+$color-brand-5: #9aabb9;
+
+// colors: base background
+$color-body-bg: #fff;
+
+// colors: links
+$color-link: #21a9f2;
+$color-link-hover: lighten($color-link, 15%);
+$color-menu-link: #dedede;
+$color-menu-link-hover: lighten($color-menu-link, 15%);
+$color-menu-active: $color-brand-2;
+
+// colors: messages
+$color-messages: #2c2d30;
+
+// colors: default gray
+$color-gray: #9e9e9e;
+
+// color: form input border
+$color-input-border: #e4e4e4;
+$color-input-focus-border: #80bdff;
+
+// color: dividers/borders
+$color-divider: #e4e4e4;
+
+// color: modal background
+$color-modal-bg: #f5f7f9;
+
+// colors: primary shadow
+$color-shadow-base: rgba(0, 0, 0, 0.12);
+
+// image overlay color
+$color-image-overlay: rgba(0, 0, 0, 0.3);
+
+// online status
+$color-online: #81d93d;
+
+// button color
+$color-button-success: $color-brand-1;
+
+//-------------------------------------//
+// FONTS
+
+// fonts: base styles
+$font-family-1: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family-2: 'Muli', sans-serif;
+$font-family-3: 'Pacifico', sans-serif;
+$font-family-system: '-apple-system', BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+$font-size-base: 14px;
+
+// fonts: weights
+$font-light: 300;
+$font-normal: 400;
+$font-medium: 500;
+$font-bold: 700;
+
+
+//-------------------------------------//
+// SPACING
+
+$spacing: 20px;
+$spacing-double: $spacing * 2;
+$spacing-third: $spacing * 3;
+$spacing-half: $spacing / 2;
+
+
+//-------------------------------------//
+// Z:INDEX
+
+$zindex-notify: 1700;
+$zindex-modal: 1600;
+$zindex-tooltip: 1500;
+$zindex-dropdown: 1400;
+$zindex-header: 1300;
+$zindex-header-workspace: 1200;
+
+// this is the default zIndex of the react-burger-menu
+$zindex-burger-menu: 1100;
+$zindex-overlay: 100;

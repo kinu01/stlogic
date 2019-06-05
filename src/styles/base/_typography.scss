@@ -1,0 +1,41 @@
+html {
+    font-size: 87.5%;  // 14px
+    text-size-adjust: 100%;
+}
+
+body {
+    font-family: $font-family-1;
+    font-weight: $font-normal;
+    color: $color-font-base;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-kerning: normal;
+    font-variant-ligatures: common-ligatures contextual;
+    font-feature-settings: 'kern', 'liga', 'clig', 'calt', 'pnum', 'onum', 'ordn';
+    font-variant-numeric: proportional-nums oldstyle-nums ordinal;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: $font-family-1;
+    font-weight: $font-normal;
+    color: $color-font-heading;
+    font-feature-settings: 'kern', 'liga', 'clig', 'calt', 'pnum', 'lnum', 'ordn';
+    font-variant-numeric: proportional-nums lining-nums ordinal;
+}
+
+a {
+    color: $color-link;
+
+    &:hover, &:focus {
+        color: $color-link-hover;
+    }
+}
+
+.text-highlight {
+    color: $color-brand-1 !important;
+}
+
+.text-break-word {
+    word-break: break-all;
+}

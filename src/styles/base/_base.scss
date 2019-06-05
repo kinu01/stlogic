@@ -1,0 +1,156 @@
+/* stylelint-disable selector-max-id, property-no-vendor-prefix */
+
+html, body {
+    height: 100%;
+}
+
+body {
+    touch-action: manipulation;
+    overflow: hidden;
+}
+
+#root {
+    height: 100%;
+}
+
+#outer-container {
+    height: 100%;
+}
+
+#page-wrap {
+    position: relative;
+    z-index: 0;
+    height: 100%;
+    contain: layout;
+    -webkit-overflow-scrolling: touch;
+
+    // Fix broken page scroll in iOS with "overflow-scrolling: touch" applied
+    // explanation - http://patrickmuff.ch/blog/2014/10/01/how-we-fixed-the-webkit-overflow-scrolling-touch-bug-on-ios
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        height: calc(100% + 1px);
+    }
+}
+
+.safari-fix #page-wrap {
+    position: fixed;
+    overflow: hidden;
+    -webkit-overflow-scrolling: auto;
+}
+
+.no-transition, .no-transition * {
+    transition-property: none !important;
+    transform: none !important;
+    animation: none !important;
+}
+
+main {
+    // padding: 0 0 $spacing-double;
+    height: 100%;
+    overflow: auto;
+
+    &.error-page {
+        padding-top: $spacing-double;
+    }
+}
+
+.loading-container {
+    margin-top: $spacing-double;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a, button {
+    &::-moz-focus-inner {
+        border: 0;
+    }
+
+    &:focus {
+        outline: 0;
+    }
+}
+
+hr {
+    border-color: #ccc;
+}
+
+section {
+    figure {
+        margin-bottom: $spacing;
+
+        figcaption {
+            display: block;
+            margin-bottom: $spacing-half;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+article section {
+    margin-bottom: $spacing-double;
+}
+
+.form-control {
+    font-family: $font-family-1;
+    box-shadow: none !important;
+
+    // needed to fix disappearing text in input fields with "-webkit-overflow-scrolling: touch" enabled
+    -webkit-transform: translate3d(0, 0, 0);
+}
+
+.input-group {
+    > .input-group-prepend, > .input-group-append {
+        > .btn {
+            border: 1px solid #ced4da;
+        }
+    }
+
+    &.-transparent {
+        > .input-group-prepend > *:first-child {
+            border-radius: 0.25rem 0 0 0.25rem;
+        }
+
+        .form-control {
+            order: 10;
+
+            &:focus + .input-group-append > * {
+                border-color: $color-input-focus-border;
+            }
+        }
+
+        &.-prepend .form-control {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+
+            &:focus + .input-group-prepend > * {
+                border-color: $color-input-focus-border;
+            }
+        }
+    }
+}
+
+.tooltip {
+    z-index: $zindex-dropdown + 10;
+}
+
+.lazyload, .lazyloading {
+    opacity: 0;
+}
+
+.lazyloaded {
+    opacity: 1;
+    transition: opacity 300ms ease-out;
+}
+
+/* stylelint-enable */

@@ -1,0 +1,132 @@
+.btn {
+    font-family: $font-family-1;
+    transition-property: background, border-color, color, top;
+    transition-duration: 150ms, 150ms, 150ms, 150ms;
+    transition-timing-function: ease-in, ease-in, ease-in, ease-in;
+
+    &:hover, &:focus {
+        transition-timing-function: ease-out, ease-out, ease-out, ease-out;
+        transition-duration: 250ms, 250ms, 250ms, 250ms;
+    }
+}
+
+.btn--xl {
+    @extend .btn-lg;
+
+    padding: 15px 40px;
+}
+
+.btn--primary {
+    background-color: $color-brand-1;
+    color: #fff;
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.12);
+    border-color: $color-brand-1;
+
+    &:hover, &.disabled:hover, &[disabled]:hover {
+        color: #fff;
+        background-color: darken($color-brand-1, 15%);
+        border-color: $color-brand-1;
+    }
+}
+
+.btn--dark {
+    background-color: #000;
+    color: #fff;
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.12);
+
+    &:hover, &.disabled:hover, &[disabled]:hover {
+        color: #fff;
+        background-color: lighten(#000, 15%);
+    }
+}
+
+.btn--red {
+    background-color: #d24646;
+    color: #fff;
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.12);
+    border: none;
+
+    &:hover, &.disabled:hover, &[disabled]:hover {
+        color: #fff;
+        background-color: lighten(#d24646, 15%);
+    }
+}
+
+.btn--outline {
+    background-color: transparent;
+    border: 1px solid $color-brand-1;
+    color: $color-brand-1;
+
+    &:hover {
+        background-color: $color-brand-1;
+        color: #fff;
+        border: 1px solid $color-brand-1;
+    }
+}
+
+.btn--icon {
+    > * {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .icon {
+        line-height: 1;
+
+        & > * {
+            vertical-align: baseline;
+        }
+    }
+
+    &.-right .icon {
+        margin-left: 10px;
+    }
+
+    &.-left .icon {
+        margin-right: 10px;
+    }
+}
+
+/** Social Buttons **/
+$color-facebook: #3b58a4;
+$color-google: #dd492b;
+$color-linkedin: #0079bd;
+
+.btn--social {
+    position: relative;
+    padding-left: 40px;
+    padding-right: 40px;
+    text-align: center;
+    font-size: 12px;
+    text-transform: uppercase;
+    overflow: hidden;
+
+    &.-facebook {
+        background: $color-facebook;
+        color: #fff;
+    }
+}
+
+.btn--facebook {
+    color: $color-facebook;
+
+    &:hover {
+        color: $color-facebook;
+    }
+}
+
+.btn--google {
+    color: $color-google;
+
+    &:hover {
+        color: $color-google;
+    }
+}
+
+.btn--linkedin {
+    color: $color-linkedin;
+
+    &:hover {
+        color: $color-linkedin;
+    }
+}

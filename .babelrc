@@ -1,0 +1,11 @@
+{
+    "presets": [
+        "stage-0"
+    ],
+    "plugins": [
+        ["reflective-bind/babel", {
+            "log": "debug",
+            "propRegex": "^on[A-Z].*$"
+        }]
+    ]
+}

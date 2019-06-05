@@ -1,0 +1,8 @@
+@import 'styles/utils/variables';
+@import 'styles/utils/mixins';
+
+.workspace {
+    padding: $spacing;
+    height: calc(100% - #{$pagewrap-offsettop});
+    contain: style size;
+}
