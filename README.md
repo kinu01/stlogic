@@ -43,3 +43,7 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.
 
 In order to create a build in production mode but with staging environment variables then execute `npm run build:staging`
+
+## Mock-ups
+
+https://www.figma.com/file/DjLVhNyoVGhE9On9AKvvmQ/ST-Logic_?node-id=0%3A1
