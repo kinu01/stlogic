@@ -81,8 +81,7 @@
     "why-did-you-update": "^1.0.6"
   },
   "husky": {
-    "hooks": {
-    }
+    "hooks": {}
   },
   "eslintConfig": {
     "extends": "react-app"

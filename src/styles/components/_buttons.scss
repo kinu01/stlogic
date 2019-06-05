@@ -29,6 +29,19 @@
     }
 }
 
+.btn--blue {
+    background-color: $color-brand-6;
+    color: #fff;
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.12);
+    border-color: $color-brand-1;
+
+    &:hover, &.disabled:hover, &[disabled]:hover {
+        color: #fff;
+        background-color: darken($color-brand-6, 15%);
+        border-color: $color-brand-1;
+    }
+}
+
 .btn--dark {
     background-color: #000;
     color: #fff;
