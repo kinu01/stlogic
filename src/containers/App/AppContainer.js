@@ -14,6 +14,7 @@ import { handleLogout } from 'redux/modules/authentication';
 const AsyncNotFoundPage = PageLoadable({ loader: () => import('containers/NotFoundPage/NotFoundPage') });
 const AsyncLogin = PageLoadable({ loader: () => import('containers/Login/LoginContainer') });
 const AsyncLanding = PageLoadable({ loader: () => import('containers/Landing/LandingContainer') });
+const AsyncDarkLanding = PageLoadable({ loader: () => import('containers/Landing/DarkLanding') });
 const AsyncDashboard = PageLoadable({ loader: () => import('containers/Workspace/WorkspaceContainer') });
 
 class AppContainer extends Component {
@@ -88,6 +89,7 @@ class AppContainer extends Component {
                     <AppLoadingContainer location={location}>
                         <Switch>
                             <Route path='/' exact={true} component={AsyncLanding} />
+                            <Route path='/dark' exact={true} component={AsyncDarkLanding} />
                             <Route path='/login' exact={true} component={AsyncLogin} />
                             <PrivateRoute path='/dashboard' component={AsyncDashboard} isAuthed={isAuthed} />
                             <Route component={AsyncNotFoundPage} />

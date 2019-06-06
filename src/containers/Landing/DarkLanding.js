@@ -6,7 +6,7 @@ import {
 
 // Images
 import withLoading from 'components/withLoading/withLoading';
-import landingOverviewImg from './LandingOverviewImg.png';
+import darkLandingOverviewImg from './darkLandingOverviewImg.png';
 import aboutUsImg from './AboutUsImg.png';
 import teachImg from './TeachBackground.png';
 
@@ -27,8 +27,8 @@ class Landing extends PureComponent {
 
     render() {
         return (
-            <div className='landing-div'>
-                <img className='background-img' src={landingOverviewImg} alt='overview' />
+            <div className='landing-div dark-landing'>
+                <img className='background-img' src={darkLandingOverviewImg} alt='overview' />
                 <AppNavbar />
                 <section className='overview' id='home'>
                     <section className='overview-info' >
@@ -36,7 +36,7 @@ class Landing extends PureComponent {
                         <p>
                             S.T.Logic offers outstanding private tuition to prepare students for standardised tests and national exams.
                         </p>
-                        <Button className='btn--blue'>
+                        <Button className='btn--black'>
                             Join us now
                         </Button>
                     </section>
@@ -86,7 +86,6 @@ class Landing extends PureComponent {
                         </svg>
                     </div>
                     <img className='teach-background' src={teachImg} alt='teach' />
-
                     <div className='teach-items'>
                         <TeacherCard
                             img='https://placehold.it/100'
